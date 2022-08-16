@@ -1,8 +1,10 @@
 module.exports = (srv) => {
   // `srv` is the instance of cds.Service
-  srv.after("READ", "Breweries", (beers) => {
-    for (let beer of beers) {
-      beer.name = `lecker ${beer.name}`
+  srv.after("READ", "Breweries", (brewery) => {
+    if (brewery.length) {
+      for (let b of brewery) {
+        b.name = `lecker ${b.name}`
+      }
     }
   })
 }
