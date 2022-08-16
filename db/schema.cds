@@ -2,21 +2,28 @@ namespace your.shop;
 
 using {
     cuid,
-    managed,
-    temporal,
-    Currency
+    managed
 } from '@sap/cds/common';
 
-entity Beers : cuid, managed {
-    name           : String(100);
+entity Beer : cuid, managed {
+    name           : String;
     abv            : Decimal(3, 1);
     ibu            : Integer;
+    style          : Style;
     brewery        : Association to one Brewery;
     virtual rating : Integer
 }
 
 entity Brewery : cuid, managed {
-    name  : String(150);
-    beers : Composition of many Beers
+    name  : String;
+    beers : Composition of many Beer
                 on beers.brewery = $self;
+}
+
+type Style : String enum {
+    Helles;
+    Pils;
+    Dunkles;
+    Weizen;
+    Bock
 }

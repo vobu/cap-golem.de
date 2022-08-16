@@ -1,10 +1,10 @@
-using {your.shop as my} from '../db/schema';
+using {your.shop as the} from '../db/schema';
 
 service BeershopService {
     @odata.draft.enabled
-    entity Beers     as projection on my.Beers;
+    entity Beers     as projection on the.Beer;
 
-    entity Breweries as projection on my.Brewery;
+    entity Breweries as projection on the.Brewery;
 }
 
 extend service BeershopService with {
