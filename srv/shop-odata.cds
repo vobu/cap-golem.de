@@ -1,7 +1,6 @@
 using {your.shop as the} from '../db/schema';
 
 service BeershopService {
-    @readonly
     entity Beers     as projection on the.Beer;
 
     @readonly
