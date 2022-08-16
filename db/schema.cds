@@ -25,5 +25,6 @@ type Style : String enum {
     Pils;
     Dunkles;
     Weizen;
-    Bock
+    Bock;
+    Pale
 }
