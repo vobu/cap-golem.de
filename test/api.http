@@ -1,0 +1,12 @@
+### alle Biere aller Brauereien
+http://localhost:4004/beershop/Breweries?$expand=beers
+
+### ein neues Bier eintragen
+POST http://localhost:4004/beershop/Beers
+Content-Type: application/json
+
+{
+    "ID": "{{$guid}}",
+    "name": "Spezial",
+    "style": "Weizen"
+}
