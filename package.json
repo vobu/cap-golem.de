@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "CAP + UI5 = Full Stack SAP",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-shop": "cds watch --open shop/webapp/index.html?sap-ui-xx-viewCache=false"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -27,9 +26,6 @@
       "@sap/cds-odata-v2-adapter-proxy"
     ]
   },
-  "sapux": [
-    "app/shop"
-  ],
   "devDependencies": {
     "@sap/ux-specification": "^1.102.3"
   }
