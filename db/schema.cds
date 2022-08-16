@@ -6,7 +6,7 @@ using {
 } from '@sap/cds/common';
 
 entity Beer : cuid, managed {
-    name           : String;
+    name           : localized String;
     abv            : Decimal(3, 1);
     ibu            : Integer;
     style          : Style;
@@ -15,7 +15,7 @@ entity Beer : cuid, managed {
 }
 
 entity Brewery : cuid, managed {
-    name  : String;
+    name  : localized String;
     beers : Composition of many Beer
                 on beers.brewery = $self;
 }
