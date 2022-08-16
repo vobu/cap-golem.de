@@ -1,8 +1,7 @@
 {
-  "name": "ui5-golem.de",
+  "name": "cap-golem.de",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "CAP + UI5 = Full Stack SAP",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/vobu/ui5-golem.de/issues"
   },
-  "homepage": "https://github.com/vobu/ui5-golem.de#readme"
+  "homepage": "https://github.com/vobu/ui5-golem.de#readme",
+  "dependencies": {
+    "@sap/cds-graphql": "^1.1.0",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.4"
+  },
+  "cds": {
+    "plugins": [
+      "@sap/cds-graphql",
+      "@sap/cds-odata-v2-adapter-proxy"
+    ]
+  }
 }
