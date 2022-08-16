@@ -1,2 +1,1 @@
-
-using from './shop/annotations';
+using from './beerbrowser/annotations';
