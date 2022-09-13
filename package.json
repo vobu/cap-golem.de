@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "CAP + UI5 = Full Stack SAP",
   "keywords": [],
-  "homepage": "https://github.com/vobu/ui5-golem.de#readme",
+  "homepage": "https://github.com/vobu/cap-golem.de#readme",
   "bugs": {
-    "url": "https://github.com/vobu/ui5-golem.de/issues"
+    "url": "https://github.com/vobu/cap-golem.de/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vobu/ui5-golem.de.git"
+    "url": "git+https://github.com/vobu/cap-golem.de.git"
   },
   "license": "ISC",
   "author": "",
