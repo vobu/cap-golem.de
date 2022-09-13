@@ -4,7 +4,8 @@
   "description": "CAP + UI5 = Full Stack SAP",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-beerbrowser": "cds watch --open beerbrowser/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-beerbrowser": "cds watch --open beerbrowser/webapp/index.html?sap-ui-xx-viewCache=false",
+    "start": "cds deploy --to sqlite; cds run"
   },
   "repository": {
     "type": "git",
@@ -25,10 +26,19 @@
     "plugins": [
       "@sap/cds-graphql",
       "@sap/cds-odata-v2-adapter-proxy"
-    ]
+    ],
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "sqlite.db"
+        }
+      }
+    }
   },
   "devDependencies": {
-    "@sap/ux-specification": "^1.102.5"
+    "@sap/ux-specification": "^1.102.5",
+    "sqlite3": "^5.0.11"
   },
   "sapux": [
     "app/beerbrowser"
