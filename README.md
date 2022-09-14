@@ -26,6 +26,14 @@ Verpackt in das `start` npm Skript sind
 - Deployment von Beispieldaten aus `/db/data/*.csv` in eine lokale SQLite Datenbank
 - Starten des Frameworks (`cds run`)
 
+Ausführen von Service- und HTTP-Tests:
+
+```bash
+$> npm test
+```
+
+Hierfür kommt das [CAP-eigene `cds.test()` API](https://cap.cloud.sap/docs/node.js/cds-test) zum Einsatz, das u.a. [Jest](https://jestjs.io/), [Axios](https://axios-http.com/) und [Chai](https://www.chaijs.com/) nutzt.
+
 ## URLs (Auszüge)
 
 - `http://localhost:4004` &rarr; Übersichtsseite
