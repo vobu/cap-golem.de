@@ -1,7 +1,7 @@
-### alle Biere aller Brauereien
+### OData v4: alle Biere aller Brauereien
 http://localhost:4004/beershop/Breweries?$expand=beers
 
-### ein neues Bier eintragen
+### OData v4: ein neues Bier eintragen
 POST http://localhost:4004/beershop/Beers
 Content-Type: application/json
 
@@ -9,4 +9,24 @@ Content-Type: application/json
     "ID": "{{$guid}}",
     "name": "Spezial",
     "style": "Weizen"
+}
+
+### GraphQL: Liste aller Biere samt ihrer Braueren
+POST http://localhost:4004/graphql
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+{
+  BeershopService {
+    Beers {
+      ID
+      name
+      abv
+      ibu
+      style
+      brewery {
+        name
+      }
+    }
+  }
 }
