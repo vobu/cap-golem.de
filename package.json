@@ -15,7 +15,7 @@
   "author": "",
   "scripts": {
     "start": "cds deploy --to sqlite; cds run",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --silent",
     "watch": "cds watch",
     "watch-beerbrowser": "cds watch --open beerbrowser/webapp/index.html?sap-ui-xx-viewCache=false"
   },
@@ -25,6 +25,11 @@
   },
   "devDependencies": {
     "@sap/ux-specification": "^1.102.5",
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "chai-subset": "^1.6.0",
+    "jest": "^29.0.3",
     "sqlite3": "^5.0.11"
   },
   "cds": {
